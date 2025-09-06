@@ -1,0 +1,145 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Projects</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/projects.css" />
+		<link rel="stylesheet" href="assets/css/navbar.css" />
+		<link rel="icon" href="images/UCXR_logo.jpg">
+		<script src="assets/js/about.js"></script>
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+		<!-- Header -->
+				<header class="navbar">
+					<nav class="nav">
+						<div class="hamburger" id="hamburger">&#9776;</div>
+						<ul class="nav-menu left-menu">
+							<li><a href="index.html">Home</a></li>
+							<li><a href="about.html">About</a></li>
+							<li><a href="projects.html" class="active">Projects</a></li>
+							<li><a href="sponsors.html">Sponsors</a></li>
+							<li><a href="contact.html">Contact</a></li>
+							<li><a href="merch.html">Merch</a></li>
+						</ul>
+						<ul class="nav-menu right-menu">
+							<li><a href="team-login.html" class="team-portal">Team Portal</a></li>
+						</ul>
+					</nav>
+				</header>
+		<div class="progress-bar" id="progressBar"></div>
+
+	<section id="projects">
+        <div class="section-header">
+            <h2>Step into Mixed Reality - elara</h2>
+            <p class="subtext">A student-designed Augmented Reality headset developed to visualise human anatomy and other complex systems; advancing innovation in medicine, education, engineering design and manufacturing. The ELARA headset is an AR device for real-time 3D visualization and interaction, designed to make technical education more immersive, accessible, and engaging for students and professionals in medicine, engineering, manufacturing, and beyond.</p>
+        </div>  
+        <div class="intro-text">
+            <h3>Meet elara (educational learning assistant for real time augmentation)</h3>
+            <p>The headset features a custom housing that integrates both custom and commercial components. In the front-facing unit: a depth camera and motion tracker capture user movement and surroundings in real time, while the optical module projects content into the user’s view. In the rear housing: a powerful compute module, our custom carrier board for component-computer integration, and our custom passive cooling assembly engineered to match commercial active cooling solutions. Visual SLAM algorithms use the camera and tracker to accurately anchor virtual elements in physical space. A single-charge, two-hour battery powers the system, supported by our custom charger. Users interact via hand gestures, voice commands, and tentatively, brainwave controls. The software applications are developed in-house, with some algorithms and assets adapted from open-source frameworks. The system supports hands-on learning, simulation, and technical design.</p>
+        </div>
+
+        <div class="project-gallery">
+            <!-- Project 1 -->
+            <div class="project-item">
+                <div class="image-wrapper">
+                <img src="images/Headset_Front_Enclosure_View.JPG" alt="Project 1 Thumbnail">
+                <div class="dot dot1" data-target="detail1"></div>
+                </div>
+            </div>
+            <!-- Project 2 -->
+            <div class="project-item">
+                <div class="image-wrapper">
+                <img src="images/Headset_Back Enclosure_View.JPG" alt="Project 2 Thumbnail">
+                <div class="dot dot2" data-target="detail2"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal / detail images -->
+    <div class="modal" id="detail1">
+      <div class="modal-content">
+        <!-- <button class="close-btn">&times;</button> -->
+        <img src="images/ANNOTATED_FE_Breakout4.JPG" alt="Project 1 Detail">
+      </div>
+    </div>
+
+    <div class="modal" id="detail2">
+      <div class="modal-content">
+        <!-- <button class="close-btn">&times;</button> -->
+        <img src="images/ANNOTATED_BE_Exploded.JPG" alt="Project 2 Detail">
+      </div>
+    </div>
+
+		<!-- Footer -->
+                <footer id="footer">
+                    <ul class="icons">
+                        <li><a href="https://github.com/UCalgaryMixedReality" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+						<li><a href="https://www.linkedin.com/company/ucxr/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+						<li><a href="https://www.instagram.com/uofc_xr" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+						<li><a href="https://www.youtube.com/@UCalgaryMixedReality" class="icon brands fa-youtube"><span class="label">YouTube</span></a></li>
+						<li><a href="mailto:ucalgarymixedreality@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+                    </ul>
+                    <ul class="copyright">
+                        <li>&copy; UCalgary Mixed Reality</li>
+                    </ul>
+                </footer>
+
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.scrollex.min.js"></script>
+		<script src="assets/js/jquery.scrolly.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+
+		<script>
+			// Scroll progress bar
+			window.addEventListener('scroll', () => {
+				const windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+				const scrolled = (window.scrollY / windowHeight) * 100;
+				document.getElementById('progressBar').style.width = scrolled + '%';
+			});
+		</script>
+
+		<script> // for the hamburger navbar functionality
+			document.addEventListener("DOMContentLoaded", function () {
+				const hamburger = document.getElementById("hamburger");
+				const leftMenu = document.querySelector(".left-menu");
+				const rightMenu = document.querySelector(".right-menu");
+
+				hamburger.addEventListener("click", function () {
+				leftMenu.classList.toggle("show");
+				rightMenu.classList.toggle("show");
+				});
+			});
+		</script>
+
+		<script>
+			document.querySelectorAll('.dot').forEach(dot => {
+				dot.addEventListener('click', () => {
+				const targetId = dot.getAttribute('data-target');
+				const modal = document.getElementById(targetId);
+				modal.style.display = 'flex';
+				});
+			});
+
+			document.querySelectorAll('.close-btn').forEach(btn => {
+				btn.addEventListener('click', () => {
+				btn.parentElement.parentElement.style.display = 'none';
+				});
+			});
+
+			// Optional: close modal by clicking outside image
+			document.querySelectorAll('.modal').forEach(modal => {
+				modal.addEventListener('click', (e) => {
+				if(e.target === modal) modal.style.display = 'none';
+				});
+			});
+		</script>
+
+	</body>
+</html>

@@ -1,0 +1,171 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Team Login</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/navbar.css" />
+		<link rel="icon" href="images/UCXR_logo.jpg">
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>
+			/* Center login form with background image */
+			body {
+				background-image: url('images/POINTCLOUD_1.png');
+				background-size: cover;
+				background-position: center;
+				background-attachment: fixed;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				min-height: 100vh;
+				margin: 0;
+				padding-top: 90px;
+				font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+				position: relative; /* Needed for ::before */
+				z-index: 0;
+				}
+
+			body::before {
+				content: "";
+				position: fixed;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background-color: rgba(0, 0, 0, 0.3); /* 30% black tint */
+				z-index: -1; /* Keep it behind content but above background */
+				pointer-events: none; /* Allows clicks to pass through */
+			}
+
+			.login-container {
+				text-align: center;
+				color: white;
+				width: 100%;
+				max-width: 400px;
+			}
+			.login-container h3 {
+				display: none; /* Hidden to match UCalgary Racing */
+			}
+			.password-wrapper {
+				position: relative;
+				display: inline-block;
+				width: 100%;
+			}
+			.password-wrapper input[type="password"] {
+				width: 100%;
+				padding: 0.8rem 2.5rem 0.8rem 1rem;
+				background: rgba(0, 0, 0, 0.8);
+				border: 1px solid #fff;
+				border-radius: 25px;
+				color: white;
+				font-size: 1rem;
+				outline: none;
+			}
+			.password-wrapper input::placeholder {
+				color: #bbb;
+			}
+			.password-wrapper .arrow {
+				position: absolute;
+				right: 1rem;
+				top: 50%;
+				transform: translateY(-50%);
+				color: white;
+				font-size: 1.2rem;
+				cursor: pointer;
+			}
+			#login-error {
+				color: red;
+				font-size: 0.9rem;
+				margin-top: 0.5rem;
+				display: none;
+			}
+		</style>
+	</head>
+	<body class="is-preload">
+		<!-- Header -->
+				<header class="navbar">
+					<nav class="nav">
+						<div class="hamburger" id="hamburger">&#9776;</div>
+						<ul class="nav-menu left-menu">
+							<li><a href="index.html">Home</a></li>
+							<li><a href="about.html">About</a></li>
+							<li><a href="projects.html">Projects</a></li>
+							<li><a href="sponsors.html">Sponsors</a></li>
+							<li><a href="contact.html">Contact</a></li>
+							<li><a href="merch.html">Merch</a></li>
+						</ul>
+						<ul class="nav-menu right-menu">
+							<li><a href="team-login.html" class="team-portal">Team Portal</a></li>
+						</ul>
+					</nav>
+				</header>
+		<div class="progress-bar" id="progressBar"></div>
+
+		<!-- Main -->
+		<div class="login-container">
+			<h3>Team Portal Login</h3>
+			<form id="login-form" onsubmit="handleLogin(event)">
+				<div class="password-wrapper">
+					<input type="password" id="password" name="password" placeholder="Login" required>
+					<span class="arrow" onclick="document.getElementById('login-form').requestSubmit()">➜</span>
+				</div>
+			</form>
+			<p id="login-error">Incorrect login</p>
+		</div>
+
+		<!-- Scripts -->
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/main.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/js-sha256/0.9.0/sha256.min.js"></script>
+
+		<!-- Login Logic -->
+		<script>
+			function handleLogin(event) {
+				event.preventDefault();
+				const password = document.getElementById('password').value;
+				const hashedPassword = sha256(password);
+				const correctHash = '5903a9ecf993d0c34829aec63c175782e64baf857602fd8173e8e1ea5e4622a9'; // Hash for pwd
+				if (hashedPassword === correctHash) {
+					sessionStorage.setItem('isLoggedIn', 'true');
+					window.location.href = 'team-portal.html';
+				} else {
+					document.getElementById('login-error').style.display = 'block';
+				}
+			}
+		</script>
+
+		<!-- Navbar Toggle -->
+		<script>
+			const hamburger = document.querySelector('.hamburger');
+			const navMenu = document.querySelector('.nav-menu');
+			hamburger.addEventListener('click', () => {
+				hamburger.classList.toggle('active');
+				navMenu.classList.toggle('open');
+			});
+		</script>
+
+		<!-- Progress Bar -->
+		<script>
+			window.addEventListener('scroll', () => {
+				const windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+				const scrolled = (window.scrollY / windowHeight) * 100;
+				document.getElementById('progressBar').style.width = scrolled + '%';
+			});
+		</script>
+		
+		<script> // for the hamburger navbar functionality
+				document.addEventListener("DOMContentLoaded", function () {
+					const hamburger = document.getElementById("hamburger");
+					const leftMenu = document.querySelector(".left-menu");
+					const rightMenu = document.querySelector(".right-menu");
+
+					hamburger.addEventListener("click", function () {
+					leftMenu.classList.toggle("show");
+					rightMenu.classList.toggle("show");
+					});
+				});
+			</script>
+
+	</body>
+</html>

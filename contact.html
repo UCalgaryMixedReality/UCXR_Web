@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact Us - UCalgary Mixed Reality</title>
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <link rel="stylesheet" href="assets/css/navbar.css" />
+  <link rel="stylesheet" href="assets/css/team-portal.css" />
+  <link rel="stylesheet" href="assets/css/contact.css" />
+  <link rel="icon" href="images/UCXR_logo.jpg" />
+</head>
+<body class="is-preload">
+
+  <!-- Header -->
+				<header class="navbar">
+					<nav class="nav">
+						<div class="hamburger" id="hamburger">&#9776;</div>
+						<ul class="nav-menu left-menu">
+							<li><a href="index.html">Home</a></li>
+							<li><a href="about.html">About</a></li>
+							<li><a href="projects.html">Projects</a></li>
+							<li><a href="sponsors.html">Sponsors</a></li>
+							<li><a href="contact.html" class="active">Contact</a></li>
+							<li><a href="merch.html">Merch</a></li>
+						</ul>
+						<ul class="nav-menu right-menu">
+							<li><a href="team-login.html" class="team-portal">Team Portal</a></li>
+						</ul>
+					</nav>
+				</header>
+
+        	<div class="progress-bar" id="progressBar"></div>
+
+  <!-- Main content -->
+  <section id="main">
+    <h2 class="contacthead">Contact Us</h2>
+    <h2 class="contacthead">
+        <div class="contact-icons">
+          <a href="https://www.linkedin.com/company/ucxr/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a>
+          <a href="https://www.instagram.com/uofc_xr" class="icon brands fa-instagram"><span class="label">Instagram</span></a>
+          <a href="mailto:ucalgarymixedreality@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a>
+        </div>
+    </h2>
+    <div class="contact-layout">
+      
+      <!-- Form -->
+      <form action="https://formspree.io/f/xjkragrz" method="POST">
+        <div class="Name">
+          <div class="form-group">
+            <label for="first-name">First Name</label>
+            <input type="text" id="first-name" name="first-name" placeholder="Please enter your first name" required>
+          </div>
+          <div class="form-group">
+            <label for="last-name">Last Name</label>
+            <input type="text" id="last-name" name="last-name" placeholder="Please enter your last name" required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email <span class="req-text"></span></label>
+          <input type="email" id="email" name="email" placeholder="Please enter your email" required>
+        </div>
+
+        <div class="form-group">
+          <label for="Subject">Subject <span class="req-text"></span></label>
+          <input type="text" id="Subject" name="subject" placeholder="Please enter the subject" required>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Message <span class="req-text"></span></label>
+          <textarea id="message" name="message" placeholder="Please enter your message" required></textarea>
+        </div>
+
+        <div class="button-Des">
+          <button type="submit">Submit</button>
+        </div>
+      </form>
+
+      <!-- Image -->
+      <div class="contact-image">
+        <img src="images/py_map_roomtour.png" alt="Contact illustration">
+      </div>
+
+    </div> <!-- end .contact-layout -->
+  </section>
+
+
+  <!-- Footer -->
+    <footer id="footer">
+      <ul class="icons">
+        <li><a href="https://github.com/UCalgaryMixedReality" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+        <li><a href="https://www.linkedin.com/company/ucxr/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+        <li><a href="https://www.instagram.com/uofc_xr" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+        <li><a href="https://www.youtube.com/@UCalgaryMixedReality" class="icon brands fa-youtube"><span class="label">YouTube</span></a></li>
+        <li><a href="mailto:ucalgarymixedreality@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+      </ul>
+      <ul class="copyright">
+        <li>&copy; UCalgary Mixed Reality</li>
+      </ul>
+    </footer>
+
+  <!-- Scripts -->
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/jquery.scrollex.min.js"></script>
+  <script src="assets/js/jquery.scrolly.min.js"></script>
+  <script src="assets/js/browser.min.js"></script>
+  <script src="assets/js/breakpoints.min.js"></script>
+  <script src="assets/js/util.js"></script>
+  <script src="assets/js/main.js"></script>
+
+  <script>
+    // Scroll progress bar
+    window.addEventListener('scroll', () => {
+      const windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const scrolled = (window.scrollY / windowHeight) * 100;
+      document.getElementById('progressBar').style.width = scrolled + '%';
+    });
+  </script>
+
+  <script> // for the hamburger navbar functionality
+    document.addEventListener("DOMContentLoaded", function () {
+      const hamburger = document.getElementById("hamburger");
+      const leftMenu = document.querySelector(".left-menu");
+      const rightMenu = document.querySelector(".right-menu");
+
+      hamburger.addEventListener("click", function () {
+      leftMenu.classList.toggle("show");
+      rightMenu.classList.toggle("show");
+      });
+    });
+	</script>
+
+
+</body>
+</html>

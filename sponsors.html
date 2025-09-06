@@ -1,0 +1,146 @@
+<!DOCTYPE HTML>
+<!--
+	Spectral by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Sponsors</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/sponsors.css" />
+		<link rel="stylesheet" href="assets/css/navbar.css" />
+		<link rel="icon" href="images/UCXR_logo.jpg">
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+				<!-- Header -->
+				<header class="navbar">
+					<nav class="nav">
+						<div class="hamburger" id="hamburger">&#9776;</div>
+						<ul class="nav-menu left-menu">
+							<li><a href="index.html">Home</a></li>
+							<li><a href="about.html">About</a></li>
+							<li><a href="projects.html">Projects</a></li>
+							<li><a href="sponsors.html" class="active">Sponsors</a></li>
+							<li><a href="contact.html">Contact</a></li>
+							<li><a href="merch.html">Merch</a></li>
+						</ul>
+						<ul class="nav-menu right-menu">
+							<li><a href="team-login.html" class="team-portal">Team Portal</a></li>
+						</ul>
+					</nav>
+				</header>
+				<div class="progress-bar" id="progressBar"></div>
+
+					<section class="thank-you-container">
+						<div>
+							<div>
+								<h2>Thank You To Our Sponsors</h2>
+								<p>
+									We extend our heartfelt gratitude to all our sponsors for their generous support.  
+									Your contributions enable us to pursue innovation, achieve our goals, and make a lasting impact in our community.
+								</p>
+								<p>
+									Your commitment fuels our progress and inspires us to reach new heights.  
+									Together, we’re shaping the future and turning ambitious ideas into reality.
+								</p>
+								<p><strong>Thank you for being an essential part of the UCXR journey.</strong></p>
+							</div>
+						</div>
+					</section>
+					
+					<section class="sponsors-section">
+						<div class="sponsors-tier gold-tier">
+							<h3>Our Sponsors</h3>
+							<div class="sponsors-logos">
+								<div class="row">
+									<a href="https://schulich.ucalgary.ca/" target="_blank">
+									<img src="images/sse.png" alt="Schulich School of Engineering" data-info="Supports technical education at UCalgary" />
+								</a>
+								<a href="https://www.altium.com/?srsltid=AfmBOopPpzvoW5SbRac6xvXBr_-i4_OhkHg2Ng_kQEi_aoZa4EVVVgBo" target="_blank">
+									<img src="images/altium_logo.png" alt="Altium" data-info="Provides PCB design tools" />
+								</a>
+								<a href="https://www.kenesto.com/" target="_blank">
+									<img src="images/Kenesto_logo.png" alt="Kenesto" data-info="Enables CAD document management" />
+								</a>
+								<a href="https://www.lattepanda.com/" target="_blank">
+									<img src="images/lattepanda_logo.png" alt="LattePanda" data-info="Provides Windows-based edge computing" />
+								</a>
+								</div>
+								<div class="row">
+									<a href="https://www.solidworks.com/" target="_blank">
+									<img src="images/solidworks_logo.png" alt="SOLIDWORKS" data-info="3D software for designing mechanical products" />
+								</a>
+								<a href="https://www.ansys.com/" target="_blank">
+									<img src="images/ANSYS_logo.png" alt="ANSYS" data-info="Provides simulation software" />
+								</a>
+								<a href="https://www.neuropawn.tech/" target="_blank">
+									<img src="images/neuropawn.avif" alt="Neuropawn" data-info="Innovative neurotech startup" />
+								</a>
+								</div>
+							</div>
+						</div>
+					
+					<!-- <div class="sponsors-tier bronze-tier">
+							<h3>Bronze Tier Sponsors</h3>
+							<div class="sponsors-logos">
+								<a href="https://www.neuropawn.tech/" target="_blank">
+									<img src="images/neuropawn.avif" alt="Neuropawn" data-info="Innovative neurotech startup" />
+								</a>
+							</div>
+						</div>  
+					-->
+					</section>
+					
+				<!-- Footer -->
+                <footer id="footer">
+                    <ul class="icons">
+                        <li><a href="https://github.com/UCalgaryMixedReality" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+						<li><a href="https://www.linkedin.com/company/ucxr/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+						<li><a href="https://www.instagram.com/uofc_xr" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+						<li><a href="https://www.youtube.com/@UCalgaryMixedReality" class="icon brands fa-youtube"><span class="label">YouTube</span></a></li>
+						<li><a href="mailto:ucalgarymixedreality@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+                    </ul>
+                    <ul class="copyright">
+                        <li>&copy; UCalgary Mixed Reality</li>
+                    </ul>
+                </footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+		<script>	// Scroll progress bar
+			window.addEventListener('scroll', () => {
+				const windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+				const scrolled = (window.scrollY / windowHeight) * 100;
+				document.getElementById('progressBar').style.width = scrolled + '%';
+			});
+		</script>
+
+		<script> // for the hamburger navbar functionality
+			document.addEventListener("DOMContentLoaded", function () {
+				const hamburger = document.getElementById("hamburger");
+				const leftMenu = document.querySelector(".left-menu");
+				const rightMenu = document.querySelector(".right-menu");
+
+				hamburger.addEventListener("click", function () {
+				leftMenu.classList.toggle("show");
+				rightMenu.classList.toggle("show");
+				});
+			});
+		</script>
+
+	</body>
+</html>

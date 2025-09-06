@@ -1,0 +1,315 @@
+:root {
+    --primary-color: white;
+    --highlight-color: black;
+    --text-color: white;
+    --background-color: #0a0e14;
+    --card-bg: #1a1f2b;
+    --font-main: 'Segoe UI', 'Helvetica Neue', sans-serif;
+  }
+  
+  body {
+    font-family: var(--font-main);
+    font-weight: 300;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.7;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 500;
+    color: var(--highlight-color);
+  }
+  
+  a {
+    color: var(--accent-color);
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  .button.primary {
+    background-color: var(--accent-color);
+    color: #000;
+    border: none;
+    font-weight: 500;
+    transition: 0.3s ease;
+  }
+  
+  .button.primary:hover {
+    background-color: #00acc1;
+  }
+  
+  #banner {
+    text-align: center;
+    padding: 4rem 2rem;
+  }
+  
+
+  
+  #footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 2rem 1rem;
+  }
+  
+  #footer .icons a {
+    color: white;
+    margin: 0 0.5rem;
+    font-size: 1.4rem;
+    transition: 0.3s;
+  }
+  
+  #footer .icons a:hover {
+    color: var(--highlight-color);
+  }
+  .home_1{
+    height: 100%;
+  }
+
+  .home_2{
+    height: 100%;
+  }
+
+  .home_3 {
+  background-color: white;
+  padding: 2rem 1rem;
+  }
+
+  img.ucxr-logo {
+    max-width: 25%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+
+  /* possible merch colours: #392D39, #221B22*/
+
+  body {
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 5%;
+    padding: 5% 1rem;
+  }
+  
+  /* made it not gradient anymore [background: linear-gradient(to right, #9925f7, #56bcf9)]*/
+  h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+    background: linear-gradient(to right, #9925f7, #56bcf9);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding: 10px;
+  }
+
+    /* made it not gradient anymore [background: linear-gradient(to right, #9925f7, #56bcf9)]*/
+  .gradient-line {
+    height: 4px;
+    background: black;
+    margin-bottom: 40px;
+    border-radius: 2px;
+  }
+  
+  .black-heading {
+  background: none !important;
+  -webkit-background-clip: initial !important;
+  -webkit-text-fill-color: initial !important;
+  color: black !important;
+  }
+
+  .grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  }
+
+  .card {
+    flex: 1 1 calc(33.333% - 20px);
+    max-width: calc(33.333% - 20px);
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    position: relative;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  }
+  
+  .card-header {
+    padding: 20px;
+    background: linear-gradient(145deg, #a33bf8, #67c3fa); /* Picked shades 10% lighter than club colours to give a softer look */
+    color: white;
+    font-weight: bold;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .card-body {
+    padding: 20px;
+    flex-grow: 1;
+  }
+  
+  .card-description {
+    margin-bottom: 20px;
+    line-height: 1.5;
+    color: #555;
+  }
+  
+  .card-image {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+  
+  .card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+  }
+  
+  .modal.active {
+    opacity: 1;
+    pointer-events: all;
+  }
+  
+  .modal-content {
+    background-color: white;
+    border-radius: 10px;
+    max-width: 800px;
+    width: 90%;
+    padding: 30px;
+    position: relative;
+  }
+  
+  .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #333;
+  }
+  
+  .xr-demo {
+    margin-top: 20px;
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 8px;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .xr-scene {
+    width: 100%;
+    height: 300px;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #e0e0e0;
+    position: relative;
+  }
+  
+  .xr-interaction {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+  }
+  
+  .xr-btn {
+    padding: 10px 20px;
+    background: linear-gradient(to right, #9925f7, #56bcf9);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.2s ease;
+  }
+  
+  .xr-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .icon {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .rotating-element {
+    width: 150px;
+    height: 150px;
+    background-color: rgba(255, 106, 0, 0.2);
+    border: 2px solid #ff6a00;
+    border-radius: 5px;
+    position: absolute;
+    transform-style: preserve-3d;
+    animation: rotate 10s infinite linear;
+    will-change: transform;
+  }
+  
+  @keyframes rotate {
+    0% {
+      transform: rotate3d(1, 1, 1, 0deg);
+    }
+    100% {
+      transform: rotate3d(1, 1, 1, 360deg);
+    }
+  }
+
+  @media (max-width: 992px) {
+  .card {
+    flex: 1 1 calc(50% - 20px);
+    max-width: calc(50% - 20px);
+    }
+  }
+  @media (max-width: 600px) {
+    .card {
+      flex: 1 1 100%;
+      max-width: 100%;
+    }
+  }
+
